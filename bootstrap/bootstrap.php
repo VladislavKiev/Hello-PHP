@@ -16,3 +16,19 @@ function getURI()
     if (isset($_SERVER['REQUEST_URI']) and !empty($_SERVER['REQUEST_URI']))
         return trim($_SERVER['REQUEST_URI'], '/');
 }
+
+
+require_once dirname(__DIR__).'/config/app.php';
+
+function dd($mix)
+{
+    echo '<pre>' .print_r($mix, true). '</pre>';
+}
+
+dd(CONTROLLERS);
+echo "<br>";
+dd(VIEWS);
+echo "<br>";
+dd(MODELS);
+echo "<br>";
+dd(LOGS);
